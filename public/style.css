@@ -101,12 +101,9 @@ h1 {
   padding: 4px 20px;
   border-radius: 7px;
   cursor: pointer;
-  height: 20px;
+  height: 25px;
 }
-.convert_container div {
-  display: inline-block;
-  height: 20px;
-}
+
 .convert_container button {
   border: none;
   cursor: pointer;
