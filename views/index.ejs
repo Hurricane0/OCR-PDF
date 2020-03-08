@@ -3,14 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Converter</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Image to PDF</h1>
-    <!-- action is not a folder, but just forcing action called "upload" which we can receive in backend(app.js) -->
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-      <input type="file" name="avatar" />
-      <button>Convert</button>
-    </form>
+    <div class="container">
+      <h1>Image to PDF</h1>
+
+      <!-- action is not a folder, but just forcing action called "upload" which we can receive in backend(app.js) -->
+      <form
+        id="upload_form"
+        action="/upload"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+      <div class='file-input'>
+        <input type='file' name="avatar">
+        <span class='button'>Choose</span>
+        <span class='label' data-js-label>No file selected</label>
+      </div>
+     
+        <button class="conver_btn">Convert</button>
+        </form>
+        
+        <input type="checkbox" id="lang_box" name="language" />
+  <label for="lang_box">Русский текст</label>
+        
+      <!-- <label for="language"
+        ><input id="lang_box" type="checkbox" name="language" />Русский
+        текст</label
+      > -->
+    </div>
   </body>
+
+  <script>
+    let lang_box = document.getElementById("lang_box");
+    let upload_form = document.getElementById("upload_form");
+    lang_box.addEventListener("click", () => {
+      if (lang_box.checked) {
+        upload_form.action = "/russian_upload";
+      } else {
+        upload_form.action = "/upload";
+      }
+      console.log(upload_form.action);
+    });
+    
+    let inputs = document.querySelectorAll('.file-input')
+
+for (let i = 0, len = inputs.length; i < len; i++) {
+  customInput(inputs[i])
+}
+
+function customInput (el) {
+  const fileInput = el.querySelector('[type="file"]')
+  const label = el.querySelector('[data-js-label]')
+  
+  fileInput.onchange =
+  fileInput.onmouseout = function () {
+    if (!fileInput.value) return
+    
+    let value = fileInput.value.replace(/^.*[\\\/]/, '')
+    el.className += ' -chosen'
+    label.innerText = value
+  }
+}
+  </script>
 </html>
