@@ -27,16 +27,11 @@
         <span class='label' data-js-label>No file selected</label>
       </div>
      
-        <button class="conver_btn">Convert</button>
+        <button class="conver_btn"><div>Convert</div></button>
         </form>
         
         <input type="checkbox" id="lang_box" name="language" />
-  <label for="lang_box">Русский текст</label>
-        
-      <!-- <label for="language"
-        ><input id="lang_box" type="checkbox" name="language" />Русский
-        текст</label
-      > -->
+        <label for="lang_box">Русский текст</label>
     </div>
   </body>
 
@@ -54,22 +49,22 @@
     
     let inputs = document.querySelectorAll('.file-input')
 
-for (let i = 0, len = inputs.length; i < len; i++) {
-  customInput(inputs[i])
-}
+    for (let i = 0, len = inputs.length; i < len; i++) {
+      customInput(inputs[i])
+    }
 
-function customInput (el) {
-  const fileInput = el.querySelector('[type="file"]')
-  const label = el.querySelector('[data-js-label]')
-  
-  fileInput.onchange =
-  fileInput.onmouseout = function () {
-    if (!fileInput.value) return
-    
-    let value = fileInput.value.replace(/^.*[\\\/]/, '')
-    el.className += ' -chosen'
-    label.innerText = value
-  }
-}
+    function customInput (el) {
+      const fileInput = el.querySelector('[type="file"]')
+      const label = el.querySelector('[data-js-label]')
+      
+      fileInput.onchange =
+      fileInput.onmouseout = function () {
+        if (!fileInput.value) return
+        
+        let value = fileInput.value.replace(/^.*[\\\/]/, '')
+        el.className += ' -chosen'
+        label.innerText = value
+      }
+    }
   </script>
 </html>

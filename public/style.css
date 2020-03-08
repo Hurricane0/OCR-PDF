@@ -96,6 +96,10 @@ h1 {
   border-radius: 7px;
   cursor: pointer;
 }
+.conver_btn div {
+  display: inline-block;
+  height: 20px;
+}
 
 /* ///////////////////////////////// */
 
