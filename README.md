@@ -3,3 +3,5 @@ Optical Character Recognition application. Built with node.js/express/ejs/tesser
 
 ## How to use
 You can upload whatever image you want and have the text from the photo extracted.
+
+You can get a glimpse of my work here: https://agile-forest-44741.herokuapp.com/
