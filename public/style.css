@@ -2,8 +2,6 @@
   body {
     min-height: 80vh !important;
   }
-  .conver_btn {
-  }
 }
 
 body {
@@ -113,6 +111,9 @@ h1 {
   border: none;
   cursor: pointer;
   outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3f3f3f;
 }
 
 /* ///////////////////////////////// */
