@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converter</title>
+  </head>
+  <body>
+    <h1>Image to PDF</h1>
+    <!-- action is not a folder, but just forcing action called "upload" which we can receive in backend(app.js) -->
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="avatar" />
+      <button>Convert</button>
+    </form>
+  </body>
+</html>
