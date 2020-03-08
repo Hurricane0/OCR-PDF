@@ -1,3 +1,11 @@
+@media screen and (max-width: 450px) {
+  body {
+    min-height: 80vh !important;
+  }
+  .conver_btn {
+  }
+}
+
 body {
   font-family: "Roboto", sans-serif;
   padding: 0;
@@ -85,7 +93,7 @@ h1 {
   opacity: 1;
 }
 
-.conver_btn {
+.convert_container {
   border: none;
   outline: none;
   background: #efeeee;
@@ -95,10 +103,16 @@ h1 {
   padding: 4px 20px;
   border-radius: 7px;
   cursor: pointer;
+  height: 20px;
 }
-.conver_btn div {
+.convert_container div {
   display: inline-block;
   height: 20px;
+}
+.convert_container button {
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 /* ///////////////////////////////// */
